@@ -1,0 +1,13 @@
+time=4
+distance=8
+longtime=54000
+weight=.042
+:::::::::::::::::::::::::::=4
+time=8
+distance=54000
+longtime=0
+weight=14400
+:::::::::::::::::::::::::::=2
+time=4000
+weight=2
+vacation=2592000

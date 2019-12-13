@@ -1,0 +1,25 @@
+time = 4s
+
+distance = 8m
+
+longtime = 15h
+
+weight = 42g
+
+:::::::::::::::::::::::::::
+
+time = 4
+
+distance = 8
+
+longtime = 54000
+
+weight = 0.023
+
+:::::::::::::::::::::::::::
+time = 4h 2s
+
+weight = 4t 2kg
+
+vacation = 30d - 2min + 30s
+

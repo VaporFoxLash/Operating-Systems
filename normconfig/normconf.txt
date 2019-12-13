@@ -1,0 +1,78 @@
+Normconf (20 points)
+Legend
+
+Oh, these configuration files ...
+You want to tell the program to do something once a year, and sit,
+count how many seconds there are this year.
+Or you read a huge number and don’t understand that this is a month,
+ a week, or any other astronomical unit.
+It’s much more convenient to write instead of obscure numbers
+....values ​​like “2 years 2 seconds”.
+And everyone without a calculator and a piece of paper will immediately-
+ understand what's what.
+ So Gallam decided to deal with this problem once
+ and for all and make sure that everyone wrote the configs in this format.
+ But do not rewrite the existing programs for such processing? Therefore,
+ Galliam decided to stretch his arms and write on his favorite bash a program-
+ that would translate configuration files from a human-readable format into-
+ seconds, grams and other standard units. Will we help Gallam make the life of-
+ company programmers easier?
+
+Formulation of the problems
+
+The program takes as a parameter the name of the configuration file in the following format:
+
+time = 4s
+
+distance = 8m
+
+longtime = 15h
+
+weight = 42g
+
+To the left of the equal sign can be any set of English letters
+(optionally time, distance, ...). The script should output a "normalized"
+config, all units should be reduced to one measurement: for time - in seconds,
+ for distance - in meters, for weight - in kilograms.
+ Valid units in the input file are:
+
+● Time: s, min, h, d
+
+● Distance: mm, sm, dm, m, km
+
+● Weight: mg, g, kg, t
+
+The presence of help and output for the specified file and the like as given below = 10 Points:
+
+time = 4
+
+distance = 8
+
+longtime = 54000
+
+weight = 0.023
+
+For the maximum score, we also process the following situations:
+
+time = 4h 2s
+
+weight = 4t 2kg
+
+vacation = 30d - 2min + 30s
+
+If we see incompatible data in any line of the config,
+we display information about the error with the line number
+and the name of the incorrect parameter. Supported arithmetic operations -
+ addition and subtraction, if there is no operation,
+ then we believe that the units must be added
+
+Launch Examples:
+
+● normconf.sh -h
+
+● normconf.sh --help
+
+● normconf.sh filename
+
+
+Mandatory requirement for everyone: no error checking http://www.shellcheck.net/
